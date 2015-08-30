@@ -23,8 +23,14 @@ function movepaddle()
   end
 end
 
+function moveball()
+  ballx+=ballxdir
+  bally+=ballydir
+end
+
 function _update()
   movepaddle()
+  moveball()
 end
 
 function _draw()
