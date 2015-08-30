@@ -8,6 +8,13 @@ pady=122
 padw=24
 padh=4
 
+ -- ball
+ ballx=64
+ bally=64
+ ballsize=3
+ ballxdir=5
+ ballydir=-3
+
 function movepaddle()
   if btn (0) then
     padx-=3
@@ -25,6 +32,8 @@ function _draw()
   rectfill(0,0, 128,128, 3)
   -- draw the paddle
   rectfill(padx,pady, padx+padw,pady+padh, 15)
+  -- draw the ball
+   circfill(ballx,bally,ballsize,15)
 end
   
 __gfx__
